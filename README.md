@@ -73,7 +73,7 @@ Enter cipher block 2: 56
 Enter cipher block 3: 12
 Output: HELLO
 
-Dependencies
+Dependencies:
 
 Standard C++ libraries:
 
