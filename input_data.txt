@@ -1,0 +1,44 @@
+*****************************
+  CRYPTOGRAPHY TEST INPUT  
+*****************************
+
+--- Test Case 1: Caesar Encryption ---
+Menu Choice: 1
+Input String: ABC
+K value: 2
+
+--- Test Case 2: Caesar Decryption ---
+Menu Choice: 2
+Input String: CDE
+K value: 2
+
+--- Test Case 3: Affine Encryption ---
+Menu Choice: 3
+Input String: ABC
+a value: 5
+b value: 8
+
+--- Test Case 4: Affine Decryption ---
+Menu Choice: 4
+Input String: QRS
+a value: 5
+b value: 8
+
+--- Test Case 5: RSA Encryption ---
+Menu Choice: 7
+Prime p: 3
+Prime q: 11
+Public key e: 3
+Plaintext (CAPITAL LETTERS ONLY): HI
+
+--- Test Case 6: RSA Decryption ---
+Menu Choice: 8
+Prime p: 3
+Prime q: 11
+Public key e: 3
+Number of cipher blocks: 2
+Cipher Block 1: 8
+Cipher Block 2: 26
+
+--- Exit Program ---
+Menu Choice: 9

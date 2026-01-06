@@ -1,0 +1,165 @@
+==============================
+CRYPTOGRAPHY PROGRAM TEST CASES
+==============================
+
+Test Case 1: Menu Input Validation
+---------------------------------
+Choice: (Menu)
+Input:
+a
+12
+3
+Expected Output:
+Invalid Option. Try again:
+Invalid Option. Try again:
+Purpose:
+Tests validID() function for handling non-numeric and out-of-range input.
+
+---------------------------------
+
+Test Case 2: Caesar Encryption (Normal Case)
+---------------------------------
+Choice: 1
+Input:
+HELLO
+3
+Expected Output:
+KHOOR
+Purpose:
+Tests basic Caesar shift logic.
+Validates convertToNum() and convertToChar() functions.
+
+---------------------------------
+
+Test Case 3: Caesar Decryption
+---------------------------------
+Choice: 2
+Input:
+KHOOR
+3
+Expected Output:
+HELLO
+Purpose:
+Confirms Caesar decryption correctly reverses encryption.
+
+---------------------------------
+
+Test Case 4: Caesar Encryption with Symbols
+---------------------------------
+Choice: 1
+Input:
+HELLO WORLD!
+3
+Expected Output:
+KHOOR ZRUOG!
+Purpose:
+Non-letter characters remain unchanged (spaces, symbols preserved).
+
+---------------------------------
+
+Test Case 5: Affine Encryption (Valid Keys)
+---------------------------------
+Choice: 3
+Input:
+HELLO
+a = 5
+b = 8
+Expected Output:
+RCLLA
+Purpose:
+Tests Affine encryption formula C = (aP + b) mod 26.
+Validates proper key where gcd(a,26) = 1.
+
+---------------------------------
+
+Test Case 6: Affine Encryption (Invalid Key)
+---------------------------------
+Choice: 3
+Input:
+HELLO
+a = 13
+b = 5
+Expected Output:
+Invalid a (must be coprime with 26)
+Purpose:
+Tests validation of 'a' to prevent invalid Affine encryption keys.
+
+---------------------------------
+
+Test Case 7: Affine Decryption
+---------------------------------
+Choice: 4
+Input:
+RCLLA
+a = 5
+b = 8
+Expected Output:
+HELLO
+Purpose:
+Tests modular inverse using extendedGCD().
+Confirms correct Affine decryption.
+
+---------------------------------
+
+Test Case 8: RSA Encryption (Small Primes)
+---------------------------------
+Choice: 7
+Input:
+p = 3
+q = 11
+e = 3
+Plaintext: HI
+Expected Output:
+Letters per block: 1
+Encrypted Blocks:
+8 26
+Purpose:
+Tests RSA encryption process.
+Verifies key generation, block formation, and modular exponentiation.
+
+---------------------------------
+
+Test Case 9: RSA Decryption
+---------------------------------
+Choice: 8
+Input:
+p = 3
+q = 11
+e = 3
+Number of cipher blocks: 2
+Cipher blocks:
+8
+26
+Expected Output:
+HI
+Purpose:
+Tests RSA decryption process.
+Validates private key generation and correct plaintext recovery.
+
+---------------------------------
+
+Test Case 10: RSA Invalid Public Key
+---------------------------------
+Choice: 7
+Input:
+p = 5
+q = 11
+e = 10
+Expected Output:
+Invalid e, not coprime with phi
+Purpose:
+Tests RSA public key validation.
+Ensures e is coprime with phi.
+
+---------------------------------
+
+Test Case 11: Caesar Encryption Edge Case
+---------------------------------
+Choice: 1
+Input:
+Z
+1
+Expected Output:
+A
+Purpose:
+Tests Caesar cipher alphabet wrap-around.
